@@ -3,8 +3,10 @@ package casilleros.pkg1.pkg0;
 
 public class Locker {
     
-    Usuario user = new Usuario ();
+    public int numeroLocker ;
+    public int IDuser ;
+    public boolean ocupado ;
     
-    public boolean ocupado = false ;
+    Usuario user = new Usuario ();
     
 }

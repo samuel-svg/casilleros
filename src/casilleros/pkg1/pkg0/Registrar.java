@@ -1,23 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package casilleros.pkg1.pkg0;
 
+import java.awt.HeadlessException;
 import java.awt.TrayIcon;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.YES_OPTION;
 
-/**
- *
- * @author samuel
- */
 public class Registrar extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Registrar
-     */
     public Registrar() {
         initComponents();
     }
@@ -53,29 +43,52 @@ public class Registrar extends javax.swing.JFrame {
         botonCancelar = new javax.swing.JButton();
         PassNIP = new javax.swing.JPasswordField();
         jPasswordFieldNIP2 = new javax.swing.JPasswordField();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel1.setText("Numero de Cuenta :");
 
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel2.setText("Nombre :");
 
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel3.setText("Apellido Paterno :");
 
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel4.setText("Apellido Materno :");
 
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel5.setText("Instituto :");
 
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel6.setText("Programa Educativo :");
 
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel7.setText("Semestre :");
 
+        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel8.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel8.setText("Grupo :");
 
+        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel9.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel9.setText("NIP :");
 
+        jLabel10.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel10.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel10.setText("Conformar NIP :");
 
+        BotonEnviar.setBackground(new java.awt.Color(255, 255, 255));
+        BotonEnviar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         BotonEnviar.setText("Enviar Registro");
         BotonEnviar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,38 +96,63 @@ public class Registrar extends javax.swing.JFrame {
             }
         });
 
+        textoNoCuenta.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         textoNoCuenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textoNoCuentaActionPerformed(evt);
             }
         });
 
+        textoNombre.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         textoNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textoNombreActionPerformed(evt);
             }
         });
 
+        textoApellidoPaterno.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         textoApellidoPaterno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textoApellidoPaternoActionPerformed(evt);
             }
         });
 
+        textoApellidoMat.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+
+        ComboBoxInstituto.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         ComboBoxInstituto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ICBI", "ICEA", "ICSa", "ICSHu", "IDA" }));
 
+        textoProgramaEd.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+
+        ComboBoxSemestre.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         ComboBoxSemestre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
 
+        textoGrupo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         textoGrupo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textoGrupoActionPerformed(evt);
             }
         });
 
-        botonCancelar.setText("Cancelar");
+        botonCancelar.setBackground(new java.awt.Color(255, 255, 255));
+        botonCancelar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        botonCancelar.setText("Volver");
         botonCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonCancelarActionPerformed(evt);
+            }
+        });
+
+        PassNIP.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+
+        jPasswordFieldNIP2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButton1.setText("Llenar Nuevamente");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -129,6 +167,8 @@ public class Registrar extends javax.swing.JFrame {
                         .addComponent(BotonEnviar)
                         .addGap(36, 36, 36)
                         .addComponent(botonCancelar)
+                        .addGap(29, 29, 29)
+                        .addComponent(jButton1)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -137,16 +177,14 @@ public class Registrar extends javax.swing.JFrame {
                                 .addComponent(jLabel5)
                                 .addComponent(jLabel4)
                                 .addComponent(jLabel3)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jLabel9)
                             .addComponent(jLabel10))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(textoApellidoMat)
-                            .addComponent(ComboBoxInstituto, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(textoNombre)
                             .addComponent(textoApellidoPaterno)
                             .addComponent(textoNoCuenta)
@@ -159,8 +197,9 @@ public class Registrar extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(textoGrupo, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jPasswordFieldNIP2))))
-                .addGap(62, 62, 62))
+                            .addComponent(jPasswordFieldNIP2)
+                            .addComponent(ComboBoxInstituto, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(69, 69, 69))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,8 +245,9 @@ public class Registrar extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BotonEnviar)
-                    .addComponent(botonCancelar))
-                .addContainerGap(28, Short.MAX_VALUE))
+                    .addComponent(botonCancelar)
+                    .addComponent(jButton1))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         pack();
@@ -215,7 +255,30 @@ public class Registrar extends javax.swing.JFrame {
 
     private void BotonEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEnviarActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "NO HE PROGRAMADO ESTO :/ ");
+        Usuario user = new Usuario();
+        int auxNIP = Integer.parseInt(jPasswordFieldNIP2.getText());
+
+        try{
+            
+            try{
+                user.numeroCuenta = Integer.parseInt(textoNoCuenta.getText());
+            }catch(NumberFormatException e){
+                JOptionPane.showMessageDialog(null, "Ingresa un numero valido");
+            }
+            user.Nombre = textoNombre.getText();
+            user.apellido = textoApellidoPaterno.getText();
+            user.apellidoMat = textoApellidoMat.getText();
+            user.Instituto = ComboBoxInstituto.getSelectedItem().toString();
+            user.programaEducativo = textoProgramaEd.getText();
+            user.semestre = Integer.parseInt(ComboBoxSemestre.getSelectedItem().toString());
+            user.NIP = Integer.parseInt(PassNIP.getText());
+
+        }catch(HeadlessException | NumberFormatException e){
+            JOptionPane.showMessageDialog(null,"No has llenado algún campo");
+        }
+        while(auxNIP!=user.NIP) JOptionPane.showMessageDialog(null, "Contraseña incorrecta");
+        JOptionPane.showMessageDialog(null, "Se ha registrado correctamente :  "+user.Nombre+" "+user.apellido+"\nNo. Cuenta : "+user.numeroCuenta);
+        
     }//GEN-LAST:event_BotonEnviarActionPerformed
 
     private void textoNoCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoNoCuentaActionPerformed
@@ -237,7 +300,13 @@ public class Registrar extends javax.swing.JFrame {
     private void botonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelarActionPerformed
         JOptionPane.showConfirmDialog(null, "Se cerrará la ventana","Confirmar",YES_OPTION, 3);
         setVisible(false);
+        MainMenu m = new MainMenu();
+        m.setVisible(true);
     }//GEN-LAST:event_botonCancelarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        LimpiaTexto();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -280,6 +349,7 @@ public class Registrar extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> ComboBoxSemestre;
     private javax.swing.JPasswordField PassNIP;
     private javax.swing.JButton botonCancelar;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -298,4 +368,15 @@ public class Registrar extends javax.swing.JFrame {
     private javax.swing.JTextField textoNombre;
     private javax.swing.JTextField textoProgramaEd;
     // End of variables declaration//GEN-END:variables
+
+    private void LimpiaTexto() {
+        textoApellidoMat.setText("");
+        textoNoCuenta.setText("");
+        textoNombre.setText("");
+        textoApellidoPaterno.setText("");
+        textoGrupo.setText("");
+        textoProgramaEd.setText("");
+        jPasswordFieldNIP2.setText("");
+        PassNIP.setText("");
+    }
 }

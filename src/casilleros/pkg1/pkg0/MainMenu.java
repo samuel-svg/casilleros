@@ -31,9 +31,16 @@ public class MainMenu extends javax.swing.JFrame {
 
         BotonRegistro = new javax.swing.JButton();
         BotonSolicitar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabelTitulo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(74, 74, 186));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setFont(new java.awt.Font("Albertus Medium", 0, 10)); // NOI18N
 
+        BotonRegistro.setBackground(new java.awt.Color(255, 255, 255));
+        BotonRegistro.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         BotonRegistro.setText("Registrar Usuario");
         BotonRegistro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -41,6 +48,8 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
 
+        BotonSolicitar.setBackground(new java.awt.Color(255, 255, 255));
+        BotonSolicitar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         BotonSolicitar.setText("Solicitar Casillero");
         BotonSolicitar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -48,25 +57,37 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/casilleros/pkg1/pkg0/246x0w.jpg"))); // NOI18N
+
+        jLabelTitulo.setFont(new java.awt.Font("Albertus Medium", 0, 14)); // NOI18N
+        jLabelTitulo.setText("Garza Casilleros");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(203, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(BotonRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(BotonSolicitar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(45, 45, 45))
+                    .addComponent(jLabelTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BotonRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BotonSolicitar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(BotonRegistro)
+                .addContainerGap()
+                .addComponent(jLabelTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(BotonSolicitar)
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addComponent(jLabel1)
+                .addGap(19, 19, 19)
+                .addComponent(BotonRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BotonSolicitar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -80,7 +101,9 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void BotonSolicitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSolicitarActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "NO HE PROGRAMADO ESTO :/ ");
+        RequestLocker rl = new RequestLocker();
+        rl.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_BotonSolicitarActionPerformed
 
     /**
@@ -119,7 +142,9 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotonRegistro;
+    public javax.swing.JButton BotonRegistro;
     private javax.swing.JButton BotonSolicitar;
+    private javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabelTitulo;
     // End of variables declaration//GEN-END:variables
 }
